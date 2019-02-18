@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1000,
+      "text": "Merge Pull Request",
+      "completed": false
+    },
+    {
+      "id": 1001,
+      "text": "Fix bug",
+      "completed": true
+    },
+    {
+      "id": 1002,
+      "text": "Write a blog",
+      "completed": false
+    }
+  ]
+}
