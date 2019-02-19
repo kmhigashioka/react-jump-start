@@ -1,6 +1,8 @@
-import React, {Component} from 'react'
-import Header from './header'
-import MainSection from './main-section'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Header from './header';
+import MainSection from './main-section';
+import { getTodos } from './action';
 
 const initialState = [
   {
@@ -73,14 +75,33 @@ class App extends Component {
     clearCompleted: this.clearCompleted
   }
 
+  componentDidMount() {
+    const { getTodos } = this.props;
+
+    getTodos();
+  }
+
   render() {
+    const { todos } = this.props;
+
     return(
       <div>
         <Header addTodo={this.actions.addTodo} />
-        <MainSection todos={this.state.todos} actions={this.actions} />
+        <MainSection todos={todos} actions={this.actions} />
       </div>
     )
   }
 }
 
-export default App
+export const mapStateToProps = ({ todos }) => ({
+  todos,
+});
+
+const mapDispatchToProps = {
+  getTodos,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App);
