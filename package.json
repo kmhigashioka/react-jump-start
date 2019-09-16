@@ -17,8 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "json-server": "json-server --watch server/db.json --port 4000"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
