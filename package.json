@@ -30,6 +30,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@testing-library/react": "9.1.4",
     "axios": "^0.18.0",
     "eslint": "^5.14.0",
     "eslint-config-airbnb": "^17.1.0",
