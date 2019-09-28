@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-router-dom": "5.0.1",
@@ -33,7 +32,7 @@
     "@types/react-router-dom": "4.3.5",
     "eslint": "6.4.0",
     "eslint-config-airbnb": "18.0.1",
-    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-prettier": "6.3.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "3.1.0",
