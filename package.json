@@ -42,5 +42,23 @@
     "eslint-plugin-react": "7.14.3",
     "prettier": "1.18.2",
     "typescript": "3.6.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/coverage/",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/index.tsx",
+      "!<rootDir>/src/serviceWorker.js",
+      "!src/**/*{L,l}oadable.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 98,
+        "functions": 98,
+        "lines": 98,
+        "statements": 98
+      }
+    }
   }
 }
