@@ -1,0 +1,11 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import {{name}} from './{{name}}';
+
+describe('<{{name}} />', () => {
+  it('should get the text', () => {
+    const { getByText } = render(<{{name}} />);
+
+    expect(getByText('Hello World')).toBeInTheDocument();
+  });
+});
