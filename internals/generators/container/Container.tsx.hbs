@@ -1,0 +1,15 @@
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import {{name}}Context from './{{name}}Context';
+
+const {{name}} = () => (
+  <{{name}}Context.Provider value=\{{}}>
+    <Helmet>
+      <title>{{name}}</title>
+      <meta name="description" content="Description of {{name}}" />
+    </Helmet>
+    <div>{{name}}</div>
+  </{{name}}Context.Provider>
+);
+
+export default {{name}};
