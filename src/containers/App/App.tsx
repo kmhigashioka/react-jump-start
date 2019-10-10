@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { AppProps } from './types';
 import AppContext from './AppContext';
@@ -15,12 +15,10 @@ const App: React.FC<AppProps> = () => (
     >
       <meta name="description" content="" />
     </Helmet>
-    <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-    </Router>
+    <Switch>
+      <Route path="/" exact component={HomePage} />
+      <Route component={NotFoundPage} />
+    </Switch>
   </AppContext.Provider>
 );
 

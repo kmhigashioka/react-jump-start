@@ -9,18 +9,18 @@ function checkStatus(response: Response) {
     return response;
   }
 
-  const error = new ErrorResponse(response.statusText);
+  const error = new ResponseError(response.statusText);
   error.response = response;
-  throw response;
+  throw error;
 }
 
-class ErrorResponse extends Error {
-  response: Response | null;
+export class ResponseError extends Error {
+  response: Response;
 
   constructor(message: string) {
     super(message);
 
-    this.response = null;
+    this.response = new Response();
   }
 }
 
