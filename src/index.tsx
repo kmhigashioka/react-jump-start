@@ -4,10 +4,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './containers/App';
 import Language from './containers/Language';
 import * as serviceWorker from './serviceWorker';
+import { translationMessages } from './containers/Language/i18n';
 
 ReactDOM.render(
   <Router>
-    <Language>
+    <Language messages={translationMessages}>
       <App />
     </Language>
   </Router>,
