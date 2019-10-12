@@ -1,11 +1,45 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import Language from './Language';
+import { render, fireEvent } from '@testing-library/react';
+import Language, { LanguageContext, useIntl } from './index';
+import { translationMessages } from './i18n';
 
 describe('<Language />', () => {
-  it('should have Language text', () => {
-    const { getByText } = render(<Language />);
+  it('should able to change locale', () => {
+    const { getByText } = render(
+      <Language messages={translationMessages}>
+        <Component />
+      </Language>,
+    );
 
-    expect(getByText('Language')).toBeInTheDocument();
+    const filRadio = getByText('fil');
+    fireEvent.click(filRadio);
+
+    const homePageTranslatedText = getByText('PahinangTahanan');
+    expect(homePageTranslatedText).toBeInTheDocument();
   });
 });
+
+function Component() {
+  const languageState = React.useContext(LanguageContext);
+  const { formatMessage: f } = useIntl();
+
+  return (
+    <>
+      <span>{f({ id: 'containers.HomePage.title' })}</span>
+      <input
+        id="en"
+        type="radio"
+        name="locale"
+        onClick={() => languageState.setLocale('en')}
+      />
+      <label htmlFor="en">en</label>
+      <input
+        id="fil"
+        type="radio"
+        name="locale"
+        onClick={() => languageState.setLocale('fil')}
+      />
+      <label htmlFor="fil">fil</label>
+    </>
+  );
+}
