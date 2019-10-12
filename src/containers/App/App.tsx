@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { AppProps } from './types';
 import AppContext from './AppContext';
 
@@ -10,8 +10,8 @@ import NotFoundPage from '../NotFoundPage/Loadable';
 const App: React.FC<AppProps> = () => (
   <AppContext.Provider value={{}}>
     <Helmet
-      titleTemplate="%s - react-boilerplate"
-      defaultTitle="react-boilerplate"
+      titleTemplate="%s - react-jump-start"
+      defaultTitle="react-jump-start"
     >
       <meta name="description" content="" />
     </Helmet>
