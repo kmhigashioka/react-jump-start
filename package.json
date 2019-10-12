@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-jump-start",
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
     "react": "16.10.2",
     "react-dom": "16.10.2",
