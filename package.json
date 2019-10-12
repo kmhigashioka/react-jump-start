@@ -55,7 +55,8 @@
       "!<rootDir>/node_modules/",
       "!<rootDir>/src/index.tsx",
       "!<rootDir>/src/serviceWorker.js",
-      "!src/**/*{L,l}oadable.tsx"
+      "!src/**/*{L,l}oadable.tsx",
+      "!src/**/*Context.ts"
     ],
     "coverageThreshold": {
       "global": {
