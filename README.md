@@ -1,4 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Based on Create React App with Typescript, bootstrapped with the latest packages of [react](https://github.com/facebook/react), [react-router-dom](https://github.com/ReactTraining/react-router), [react-helmet-async](https://github.com/staylor/react-helmet-async), [react-intl](https://github.com/formatjs/react-intl), [styled-components](https://github.com/styled-components/styled-components), and [@testing-library/react](https://github.com/testing-library/react-testing-library). A redux-less boilerplate inspired by [@kentcdodds](https://twitter.com/kentcdodds) and [@ryanflorence](https://twitter.com/ryanflorence). 
+
+## Library Selections
+
+### State Management
+React Context
+
+### CSS Styling
+styled-components
+
+### Routing
+react-router-dom
+
+### Head Document
+react-helmet-async
+
+### Internationalization
+react-intl
+
+### Component Lazy Loading
+React lazy, Suspense
+
+### Unit Testing
+@testing-library/react
 
 ## Available Scripts
 
@@ -37,32 +60,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `npm run generate`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Creates template files either for `component` or `container`.
