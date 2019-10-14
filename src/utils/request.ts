@@ -1,10 +1,13 @@
-export default function request(url: string, options?: {} | undefined) {
+export default function request(
+  url: string,
+  options?: {} | undefined,
+): Promise<any> {
   return fetch(url, options)
     .then(checkStatus)
     .then(parseJSON);
 }
 
-function checkStatus(response: Response) {
+function checkStatus(response: Response): Response {
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
@@ -24,7 +27,7 @@ export class ResponseError extends Error {
   }
 }
 
-function parseJSON(response: Response) {
+function parseJSON(response: Response): Promise<any> | null {
   if (response.status === 204 || response.status === 205) {
     return null;
   }

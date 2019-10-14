@@ -19,7 +19,7 @@ describe('<Language />', () => {
   });
 });
 
-function Component() {
+function Component(): React.ReactElement {
   const languageState = React.useContext(LanguageContext);
   const { formatMessage: f } = useIntl();
 
@@ -30,14 +30,14 @@ function Component() {
         id="en"
         type="radio"
         name="locale"
-        onClick={() => languageState.setLocale('en')}
+        onClick={(): void => languageState.setLocale('en')}
       />
       <label htmlFor="en">en</label>
       <input
         id="fil"
         type="radio"
         name="locale"
-        onClick={() => languageState.setLocale('fil')}
+        onClick={(): void => languageState.setLocale('fil')}
       />
       <label htmlFor="fil">fil</label>
     </>

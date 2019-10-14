@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const NotFoundPage = () => (
+const NotFoundPage = (): React.ReactElement => (
   <>
     <Helmet>
       <title>Not Found</title>
