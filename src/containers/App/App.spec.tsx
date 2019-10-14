@@ -3,9 +3,9 @@ import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
-jest.mock('../HomePage/Loadable', () => () => 'MockHomePage');
+jest.mock('../HomePage/Loadable', () => (): string => 'MockHomePage');
 
-jest.mock('../NotFoundPage/Loadable', () => () => 'MockNotFoundPage');
+jest.mock('../NotFoundPage/Loadable', () => (): string => 'MockNotFoundPage');
 
 describe('<App />', () => {
   it('should able to navigate to /', () => {
@@ -25,7 +25,7 @@ type ComponentProps = {
   initialEntries: string[] | undefined;
 };
 
-function Component({ initialEntries }: ComponentProps) {
+function Component({ initialEntries }: ComponentProps): React.ReactElement {
   return (
     <MemoryRouter initialEntries={initialEntries}>
       <App />

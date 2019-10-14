@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HomePageContext from './HomePageContext';
 
-const HomePage = () => (
+const HomePage = (): React.ReactElement => (
   <HomePageContext.Provider value={{}}>
     <Helmet>
       <title>Home</title>
