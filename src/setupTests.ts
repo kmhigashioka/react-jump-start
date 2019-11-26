@@ -1,2 +1,4 @@
 import '@testing-library/jest-dom/extend-expect';
-jest.mock('react-helmet-async');
+jest.mock('react-helmet-async', () => ({
+  Helmet: (): null => null,
+}));
