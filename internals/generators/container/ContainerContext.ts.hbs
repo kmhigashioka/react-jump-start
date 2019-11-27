@@ -1,8 +1,16 @@
 import React from 'react';
 import { T{{name}}Context } from './types';
 
-const {{name}}Context = React.createContext<T{{name}}Context>({});
+const {{name}}Context = React.createContext<T{{name}}Context | undefined>(undefined);
 
 {{name}}Context.displayName = '{{name}}Context';
+
+export const use{{name}}Context = (): T{{name}}Context => {
+  const context = React.useContext({{name}}Context);
+  if (context === undefined) {
+    throw new Error('use{{name}}Context must be used within a {{name}}Provider.');
+  }
+  return context;
+};
 
 export default {{name}}Context;
