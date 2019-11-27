@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HomePageContext from './HomePageContext';
+import TextInput from '../../components/TextInput';
 
 const HomePage = (): React.ReactElement => (
   <HomePageContext.Provider value={{}}>
@@ -9,6 +10,7 @@ const HomePage = (): React.ReactElement => (
       <meta name="description" content="Description of Home" />
     </Helmet>
     <div>HomePage</div>
+    <TextInput />
   </HomePageContext.Provider>
 );
 
