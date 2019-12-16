@@ -8,6 +8,7 @@ describe('request', () => {
   });
 
   it('should get json', async () => {
+    type Res = { hello: string };
     const res = new Response('{"hello":"world"}', {
       status: 200,
       headers: {
@@ -16,7 +17,7 @@ describe('request', () => {
     });
     mockFetch.mockReturnValue(Promise.resolve(res));
 
-    const data = await request('http://example.com/api/examples');
+    const data = await request<Res>('http://example.com/api/examples');
 
     expect(data.hello).toBe('world');
   });
