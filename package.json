@@ -48,7 +48,7 @@
     "eslint-plugin-react": "7.18.3",
     "husky": "4.2.1",
     "lint-staged": "10.0.7",
-    "plop": "2.5.3",
+    "plop": "2.6.0",
     "prettier": "1.19.1"
   },
   "jest": {
